@@ -1,0 +1,207 @@
+---
+---
+
+$text-color: #46433A;
+$anchor-text-color: #CE534D;
+$background-color: #F1EED9;
+$background-pattern: url("../images/concrete_seamless.png");
+
+// @font-face {
+// 	font-family: 'MedCom';
+// 	src: url('fonts/MedCom.eot');
+// 	src: url('fonts/MedCom.eot?#iefix') format('embedded-opentype'),
+// 		 url('fonts/MedCom.woff') format('woff'),
+// 		 url('fonts/MedCom.ttf') format('truetype'),
+// 		 url('fonts/MedCom.svg#MedCom') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+//
+// @font-face {
+// 	font-family: 'LightCond';
+// 	src: url('fonts/LightCond.eot');
+// 	src: url('fonts/LightCond.eot?#iefix') format('embedded-opentype'),
+// 		 url('fonts/LightCond.woff') format('woff'),
+// 		 url('fonts/LightCond.ttf') format('truetype'),
+// 		 url('fonts/LightCond.svg#LightCond') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+//
+// @font-face {
+// 	font-family: 'Light';
+// 	src: url('fonts/Light.eot');
+// 	src: url('fonts/Light.eot?#iefix') format('embedded-opentype'),
+// 		 url('fonts/Light.woff') format('woff'),
+// 		 url('fonts/Light.ttf') format('truetype'),
+// 		 url('fonts/Light.svg#Light') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+//
+// @font-face {
+// 	font-family: 'ThinExt';
+// 	src: url('fonts/ThinExt.eot');
+// 	src: url('fonts/ThinExt.eot?#iefix') format('embedded-opentype'),
+// 		 url('fonts/ThinExt.woff') format('woff'),
+// 		 url('fonts/ThinExt.ttf') format('truetype'),
+// 		 url('fonts/ThinExt.svg#ThinExt') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+//
+// @font-face {
+// 	font-family: 'LightExt';
+// 	src: url('fonts/LightExt.eot');
+// 	src: url('fonts/LightExt.eot?#iefix') format('embedded-opentype'),
+// 		 url('fonts/LightExt.woff') format('woff'),
+// 		 url('fonts/LightExt.ttf') format('truetype'),
+// 		 url('fonts/LightExt.svg#LightExt') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	// font-family: 'Light';
+	color: $text-color;
+	background-image: $background-pattern;
+}
+
+h2 {
+	font-weight: 600;
+	// font-family: 'LightCond';
+}
+
+header,
+main {
+	padding: 0 20px;
+}
+
+/*** wrapper div for both header and main ***/
+.wrapper {
+	margin-top: 10%;
+}
+
+/*** anchor tags ***/
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: $anchor-text-color;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/*** List icons ***/
+.btn-group {
+	text-align: center;
+}
+
+.btn-group a {
+	padding: 0.5em;
+}
+
+/*** logo ***/
+.logo-container {
+	text-align: center;
+}
+
+.logo {
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	background-size: cover;
+	// border-radius: 50%;
+	// -moz-border-radius: 50%;
+	// border: 2px solid $background-color;
+	// box-shadow: 0 0 0 3px $text-color;
+}
+
+/*** author ***/
+.author-container h1 {
+	font-size: 2.8em;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+	font-weight: 600;
+}
+
+/*** tagline ***/
+.tagline-container p {
+	font-size: 1.3em;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 2em;
+	font-weight: 600;
+}
+
+/******/
+hr {
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+}
+
+/*** footer ***/
+footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 20px;
+}
+
+.poweredby {
+	font-family: "Arial Narrow", Arial;
+	font-size: 0.6em;
+	line-height: 0.6em;
+	padding: 0 5px;
+}
+
+/*** media queries ***/
+/* X-Small devices (phones, 480px and up) */
+@media (min-width: 480px) {
+	/* wrapper stays 480px wide past 480px wide and is kept centered */
+	.wrapper {
+		width: 480px;
+		margin: 10% auto 0 auto;
+	}
+}
+
+/* All other devices (768px and up) */
+@media (min-width: 768px) {
+	/* past 768px the layout is changed and the wrapper has a fixed width of 680px
+	to accomodate both the header column and the content column */
+	.wrapper {
+		width: 680px;
+	}
+
+	/* the header column stays left and has a dynamic width with all contents
+	aligned right */
+	header {
+		float: left;
+		width: 46%;
+		text-align: right;
+	}
+
+	.author-container h1,
+	.logo-container,
+	.tagline-container p {
+		text-align: right;
+	}
+
+	main {
+		width: 46%;
+		margin-left: 54%;
+		padding: 0;
+	}
+}
